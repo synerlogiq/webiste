@@ -1,1 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- REMPLACEZ / REPLACE: company name in title and description -->
+<title>[Nom de l’entreprise inc.]</title>
+<meta name="description" content="Entreprise technologique québécoise : cybersécurité, infrastructure d’IA sur site et développement d’applications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #eef3fa;
+    --ink: #13233a;
+    --muted: #4f5d70;
+    --primary: #003da5;
+    --rule: #d3deee;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0a1a33;
+      --surface: #12274a;
+      --ink: #e8eef7;
+      --muted: #a5b3c7;
+      --primary: #8db4ff;
+      --rule: #22395f;
+      color-scheme: dark;
+    }
+  }
 
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+
+  /* Bilingual switching: French is the default, as required in Québec */
+  html[data-lang="fr"] [lang="en"] { display: none; }
+  html[data-lang="en"] [lang="fr"] { display: none; }
+
+  .wrap {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+  }
+  .name {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .lang-toggle {
+    font: inherit;
+    font-size: 0.9375rem;
+    color: var(--primary);
+    background: none;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    cursor: pointer;
+  }
+  .lang-toggle:hover { border-color: var(--primary); }
+
+  :focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+  }
+
+  .hero {
+    padding: 3.5rem 0 4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero h1 {
+    margin: 0 0 1.5rem;
+    font-size: clamp(2.25rem, 6.5vw, 3.75rem);
+    line-height: 1.04;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--primary);
+    max-width: 14ch;
+  }
+  .hero p {
+    margin: 0;
+    max-width: 38rem;
+    font-size: 1.1875rem;
+    color: var(--muted);
+  }
+
+  section { padding: 3.5rem 0; }
+  h2 {
+    margin: 0 0 1.75rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  .services { margin: 0; }
+  .service {
+    padding: 1.25rem 0 1.25rem 1.25rem;
+    border-left: 3px solid var(--primary);
+  }
+  .service + .service { margin-top: 1rem; }
+  .service dt {
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+  }
+  .service dd { margin: 0; color: var(--muted); }
+
+  .project {
+    background: var(--surface);
+    border-radius: 14px;
+    padding: 2rem 1.75rem;
+  }
+  .project h2 { margin-bottom: 0.75rem; }
+  .project p { margin: 0; color: var(--muted); }
+
+  .contact p { margin: 0 0 0.5rem; color: var(--muted); }
+  .contact a {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    word-break: break-word;
+  }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2rem 0 3rem;
+    font-size: 0.9375rem;
+    color: var(--muted);
+  }
+  footer p { margin: 0.15rem 0; }
+
+  @media (max-width: 480px) {
+    .hero { padding: 2.5rem 0 3rem; }
+    section { padding: 2.75rem 0; }
+    .project { padding: 1.5rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <!-- REMPLACEZ / REPLACE -->
+    <span class="name">[Nom de l’entreprise inc.]</span>
+    <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch to English">English</button>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1 lang="fr">Des systèmes sûrs, une IA sous votre contrôle.</h1>
+      <h1 lang="en">Secure systems, AI under your control.</h1>
+
+      <p lang="fr">Nous sommes une entreprise technologique québécoise. Nous aidons les organisations à protéger leurs systèmes et à héberger leurs outils d’IA sur leur propre infrastructure, et nous développons des applications pour des causes qui comptent.</p>
+      <p lang="en">We’re a technology company based in Québec. We help organizations protect their systems and run their AI tools on their own infrastructure, and we build apps for causes that matter.</p>
+    </div>
+
+    <section>
+      <h2 lang="fr">Ce que nous faisons</h2>
+      <h2 lang="en">What we do</h2>
+
+      <dl class="services">
+        <div class="service">
+          <dt lang="fr">Cybersécurité</dt>
+          <dt lang="en">Cybersecurity</dt>
+          <dd lang="fr">Évaluation de votre posture de sécurité, renforcement des postes et des serveurs, gestion des accès et accompagnement lors d’incidents.</dd>
+          <dd lang="en">Security assessments, hardening of workstations and servers, access management, and support when incidents happen.</dd>
+        </div>
+        <div class="service">
+          <dt lang="fr">Infrastructure d’IA sur site</dt>
+          <dt lang="en">On‑premises AI infrastructure</dt>
+          <dd lang="fr">Conception et déploiement de serveurs pour faire fonctionner des modèles d’IA localement, afin que vos données restent dans vos locaux.</dd>
+          <dd lang="en">Designing and deploying servers that run AI models locally, so your data stays on your premises.</dd>
+        </div>
+        <div class="service">
+          <dt lang="fr">Développement d’applications</dt>
+          <dt lang="en">App development</dt>
+          <dd lang="fr">Applications mobiles conçues avec soin pour la santé, le bien‑être et les organismes à but non lucratif.</dd>
+          <dd lang="en">Carefully built mobile apps for health, wellbeing, and nonprofit organizations.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section>
+      <div class="project">
+        <h2>HSJournal</h2>
+        <p lang="fr">Un journal privé pour les personnes atteintes d’hidradénite suppurée : douleur, lésions, alimentation et suppléments. Toutes les données restent sur votre téléphone. Bientôt sur l’App Store.</p>
+        <p lang="en">A private journal for people living with hidradenitis suppurativa: pain, lesions, food, and supplements. All data stays on your phone. Coming soon to the App Store.</p>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2 lang="fr">Nous joindre</h2>
+      <h2 lang="en">Contact</h2>
+      <p lang="fr">Pour un projet, une question ou du soutien :</p>
+      <p lang="en">For a project, a question, or support:</p>
+      <!-- REMPLACEZ / REPLACE: your business email -->
+      <a href="mailto:contact@synerlogiq.com">contact@synerlogiq.com</a>
+    </section>
+  </main>
+
+  <footer>
+    <!-- REMPLACEZ / REPLACE -->
+    <p>© 2026 SYNERLOGIQ</p>
+    <p>Québec, Canada</p>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById("langToggle");
+    var titles = {
+      fr: "SYNERLOGIQ",
+      en: "SYNERLOGIQ"
+    };
+    function setLang(lang) {
+      root.setAttribute("data-lang", lang);
+      root.setAttribute("lang", lang);
+      btn.textContent = lang === "fr" ? "English" : "Français";
+      btn.setAttribute("aria-label", lang === "fr" ? "Switch to English" : "Passer au français");
+      document.title = titles[lang];
+    }
+    btn.addEventListener("click", function () {
+      setLang(root.getAttribute("data-lang") === "fr" ? "en" : "fr");
+    });
+  })();
+</script>
+</body>
+</html>
